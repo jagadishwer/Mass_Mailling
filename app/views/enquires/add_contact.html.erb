@@ -1,0 +1,17 @@
+<div style="width:400px;margin-top: 50px;margin-left:30%;border:5px solid #cccccc;border-radius:15px;padding:30px;padding-left: 100px; ">
+<h4> Add Contact To Enquires: </h4>
+<%=form_for :contact,{:url=>'add_contact'} do |f|%>
+<div class="form-inputs" >
+<%= f.label :name%> <%=f.text_field "name"%>
+<%= f.label :phone_no%> <%=f.text_field "phone_no"%>
+  <%= f.label :email_id%> <%=f.text_field "email"%>
+  <%= f.label :course%> <%=f.text_field "course"%>
+
+
+
+</div>
+<div class="form-actions">
+<%=f.submit "send", :class=>"btn-large btn-success" %>
+</div>
+<%end%>
+</div>

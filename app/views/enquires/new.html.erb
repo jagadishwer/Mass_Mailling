@@ -1,0 +1,16 @@
+<div style="width:400px;margin-top: 50px;margin-left:30%;border:5px solid #cccccc;border-radius:15px;padding:30px;padding-left: 100px; ">
+<%=form_for :message,{:url=>'create'} do |f|%>
+<div class="form-inputs" >
+
+<%= f.label :select_file_type %>
+<%=f.radio_button :file_type, 1%>  Openoffice (.ods)
+<%=f.radio_button :file_type, 2%>  Excel(.xls)
+<%=f.radio_button :file_type, 3%>  Excelx(.xlsx)<br/><br/>
+<%= f.label "Whom to Send?"%>  <%=f.file_field "file"%>
+
+</div>
+<div class="form-actions">
+<%=f.submit "Save", :class=>"btn-large btn-success" %>
+</div>
+<%end%>
+</div>

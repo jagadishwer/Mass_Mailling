@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MassMailing</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body style="background-color: rgb(252, 248, 227);">
+  <div style="background-color:black;height:150px;margin-top: -1.7%;">
+    <h3 style="text-align:left;line-height: 220px;color:whitesmoke;font-variant:small-caps;font-family:fantasy;margin-left:20px;font-size: 25px;">Brilliance-works Mailing Service</h3>
+  </div>
+    <div class="navbar">
+  <div class="navbar-inner">
+    <%=link_to "Home","/enquires/add_contact",:class=>"brand"%>
+    
+    <ul class="nav">
+      <li ><%=link_to "Enquires","/enquires/show"%></li>
+      <li><%=link_to "Add To Database","/enquires/new"%></li>
+        <li><%=link_to "Send From Database","/enquires/send_mail"%></li>
+      <li><%=link_to "Send From Spreadsheets","/messages/new"%></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <%= render 'layouts/messages' %>
+  
+<%= yield %>
+</div>
+
+</body>
+</html>

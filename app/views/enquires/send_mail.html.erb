@@ -1,0 +1,14 @@
+<div style="width:400px;margin-top: 50px;margin-left:30%;border:5px solid #cccccc;border-radius:15px;padding:30px;padding-left: 100px; ">
+<h4>Send Mail to Enquires from Database:</h4>
+<%=form_for :message,{:url=>'send_mail'} do |f|%>
+<div class="form-inputs" >
+<%= f.label :subject%> <%=f.text_field "subject"%>
+<%= f.label :message%> <%=f.text_area "message",:rows=>10%>
+
+
+</div>
+<div class="form-actions">
+<%=f.submit "send", :class=>"btn-large btn-success" %>
+</div>
+<%end%>
+</div>
